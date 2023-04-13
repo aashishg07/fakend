@@ -21,9 +21,9 @@ from sklearn import metrics
 # df_fake = pd.read_csv("Fake.csv")
 # df_true = pd.read_csv("True.csv")
 chunksize = 1000 # read 100,000 rows at a time
-for df_fake in pd.read_csv('Fake.csv', chunksize=chunksize):
+for df_fake in pd.read_csv('./docs/Fake.csv', chunksize=chunksize):
     df_fake
-for df_true in pd.read_csv('True.csv', chunksize=chunksize):
+for df_true in pd.read_csv('./docs/True.csv', chunksize=chunksize):
     df_fake
 
 # Assign binary class labels to fake news and true news
@@ -123,8 +123,8 @@ accuracy = DT.score(xv_test, y_test)
 print(f"Accuracy score: {accuracy:.2f}")
 
 # Save the model
-joblib.dump(DT, 'Decision_TC_model.pkl')
+joblib.dump(DT, './output_model/Decision_TC_model.pkl')
 
 # # Save the model
-joblib.dump(vectorization, 'vectorization.pkl')
+joblib.dump(vectorization, './output_model/tf-idf/vectorization.pkl')
 
