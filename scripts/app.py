@@ -123,7 +123,7 @@ accuracy = DT.score(xv_test, y_test)
 print(f"Accuracy score: {accuracy:.2f}")
 
 # Save the model
-joblib.dump(DT, './output_model/Decision_TC_model.pkl')
+joblib.dump(DT, './output_model/classifier_model/Decision_TC_model.pkl')
 
 # # Save the model
 joblib.dump(vectorization, './output_model/tf-idf/vectorization.pkl')
